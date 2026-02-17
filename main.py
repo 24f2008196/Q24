@@ -71,11 +71,12 @@ def run_pipeline(request: PipelineRequest):
 
             # Simple sentiment logic
             if any(word in original_text.lower() for word in ["good", "great", "excellent", "love"]):
-                sentiment = "positive"
+                sentiment = "enthusiastic"
             elif any(word in original_text.lower() for word in ["bad", "worst", "hate", "terrible"]):
-                sentiment = "negative"
+                sentiment = "critical"
             else:
-                sentiment = "neutral"
+                sentiment = "objective"
+
 
             # -----------------------------
             # STORE IN DATABASE
